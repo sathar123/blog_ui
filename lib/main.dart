@@ -140,15 +140,21 @@ class Bloglist extends StatelessWidget {
                         children: [
                           Text(user['text']!,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 2,),
                           Text.rich(
+
                            TextSpan(
                              children: [
                                WidgetSpan(child: CircleAvatar(radius: 12,)),
                                WidgetSpan(child: SizedBox(width: 5,)),
                                TextSpan(text: user['name']),
                                WidgetSpan(child: SizedBox(width: 20,)),
-                               TextSpan(text: '4 min read')
+                               TextSpan(
+
+                                 text: '4 min read',
+                               )
+
                              ]
-                           )
+                           ),maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           )
 
                         ],
